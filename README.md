@@ -2,6 +2,10 @@
 
 Сервис для сопоставления текстовых описаний вакансии и резюме.
 
+# Схема работы сервиса
+
+![drivers_helper](reports/figures/sevice_scheme.png)
+
 # Структура проекта
 
 Структура проекта была создана под вдохновением от `Cookiecutter Data Science template` ([link](https://github.com/drivendata/cookiecutter-data-science)).
