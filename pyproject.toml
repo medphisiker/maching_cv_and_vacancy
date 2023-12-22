@@ -12,6 +12,8 @@ numpy = "^1.26.2"
 ipykernel = "^6.27.1"
 lxml = "^4.9.3"
 sentence-transformers = "^2.2.2"
+streamlit = "^1.29.0"
+faiss-gpu = {version = "^1.7.2", platform = "linux"}
 
 
 [build-system]
