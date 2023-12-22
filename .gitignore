@@ -162,6 +162,7 @@ cython_debug/
 # ignore data
 /data/*/*
 *.zip
+*.csv
 
 # ignore models
 /models/*/
@@ -170,3 +171,7 @@ cython_debug/
 
 # ignore videos
 *.mp4
+
+# ignore faiss index
+*.index
+
