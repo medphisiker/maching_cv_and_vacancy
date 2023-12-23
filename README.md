@@ -1,4 +1,6 @@
-![home_page](reports/figures/service_lending.jpg)
+![home_page](src/streamlit_app/pics/CareerRank.jpg)
+
+# CareerRank, - сервис для подбора походящих друг другу вакансий и резюме
 
 # Описание проекта
 
