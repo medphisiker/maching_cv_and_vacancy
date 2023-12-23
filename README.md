@@ -1,3 +1,5 @@
+![home_page](reports/figures/service_lending.jpg)
+
 # Описание проекта
 
 CareerRank - помогаем талантам найти места для их реализации!
