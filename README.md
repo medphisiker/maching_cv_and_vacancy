@@ -58,6 +58,28 @@ CareerRank - помогаем талантам найти места для их
 
 Данный показатель пропорционален производительности модели.
 
+Пример записанных логов
+
+```
+data/faiss_index/rubert-tiny2/resume_db.index
+Function 'create_faiss_index' executed in 280.8321s
+
+data/faiss_index/rubert-tiny2/vacancy_db.index
+Function 'create_faiss_index' executed in 133.4256s
+
+data/faiss_index/DeepPavlov_distilrubert-tiny-cased-conversational/resume_db.index
+Function 'create_faiss_index' executed in 97.0770s
+
+data/faiss_index/DeepPavlov_distilrubert-tiny-cased-conversational/vacancy_db.index
+Function 'create_faiss_index' executed in 157.9682s
+
+data/faiss_index/LaBSE-en-ru/resume_db.index
+Function 'create_faiss_index' executed in 252.5127s
+
+data/faiss_index/LaBSE-en-ru/vacancy_db.index
+Function 'create_faiss_index' executed in 652.4580s
+```
+
 ### Измерение точности моделей
 
 Мы ввели следующую методику ручной оценки качества выдачи рекомендаций нашего сервиса.
