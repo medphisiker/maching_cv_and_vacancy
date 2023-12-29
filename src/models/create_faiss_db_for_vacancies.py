@@ -1,12 +1,10 @@
 import os
 
-import faiss
-from faiss_utils import encode_text_by_batches, get_text_from_df
-from sentence_transformers import SentenceTransformer
+from faiss_utils import create_faiss_index
 
 if __name__ == "__main__":
     # конфигурируем хранилище
-    data_storage_path = "src/data"
+    data_storage_path = "data/faiss_index"
     vacancy_db_name = "vacancy_db.index"
 
     # считываем описания вакансий из интересующих нас столбцов
@@ -14,17 +12,10 @@ if __name__ == "__main__":
     info_columns = ["name", "description"]
 
     # указываем модель, с которой будем получать эмбединги
-    model_name = "cointegrated/rubert-tiny2"
+    model_name = "cointegrated/LaBSE-en-ru"
+    model_title = "LaBSE-en-ru"
 
-    model = SentenceTransformer(model_name)
+    data_storage_path = os.path.join(data_storage_path, model_title, vacancy_db_name)
 
-    # получаем базу для вакансий
-    vacancies = get_text_from_df(vacancy_csv_path, info_columns)
-    vacancy_vectors = encode_text_by_batches(model, vacancies, batch_size=256)
-    dim = vacancy_vectors.shape[1]
-
-    vacancy_index = faiss.IndexFlatL2(dim)
-    vacancy_index.add(vacancy_vectors)
-
-    vacancy_db_path = os.path.join(data_storage_path, vacancy_db_name)
-    faiss.write_index(vacancy_index, vacancy_db_path)
+    # получаем faiss индекс
+    create_faiss_index(vacancy_csv_path, info_columns, model_name, data_storage_path)
