@@ -27,11 +27,14 @@ CareerRank - помогаем талантам найти места для их
 * вакансий из колонок "name", "description"
 * резюме из колонок "Ищет работу на должность:", "Опыт работы"
 
-получаем эмбединги данных текстовых описаний с помощью предобученной модели `cointegrated/rubert-tiny2` ([ссылка](https://habr.com/ru/articles/669674/)).
+получаем эмбединги текстовых описаний с помощью предобученных моделей:
+* `cointegrated/rubert-tiny2` ([ссылка](https://huggingface.co/cointegrated/rubert-tiny2))
 
-Размер вектора 312.
+* `DeepPavlov/distilrubert-tiny-cased-conversational` ([ссылка](https://huggingface.co/DeepPavlov/distilrubert-tiny-cased-conversational))
 
-Строим индекс Facebook Faiss отдельно для всех вакансий  отдельно для всех резюме.
+* `cointegrated/LaBSE-en-ru` ([ссылка](https://huggingface.co/cointegrated/LaBSE-en-ru))
+
+Строим индекс Facebook Faiss отдельно для всех вакансий и отдельно для всех резюме.
 
 Сохраняем их в папку `src/streamlit_app/data`.
 
