@@ -61,10 +61,10 @@ def main():
         _, vacancy_ids = vacancy_index.search(resume_embed, topn)
         
         st.write("Для выбранное вами резюме")
-        st.dataframe(df_resume.iloc[resume_id])
+        st.dataframe(df_resume.iloc[resume_id], use_container_width=False)
         
         st.write(f"Мы подобрали {topn} вакансии:")
-        st.dataframe(df_vacancy.iloc[vacancy_ids[0]])
+        st.dataframe(df_vacancy.iloc[vacancy_ids[0]], use_container_width=False)
 
 
 if __name__ == "__main__":
